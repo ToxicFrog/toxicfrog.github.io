@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ifIRC 0.1 released
+title: ifIRC 0.1.0 released
 ---
 
 [ifIRC](https://github.com/ToxicFrog/ifirc), the ifMUD <-> IRC proxy, has now been officially released, after a bunch of restructuring to improve reliability and remove the dependence on the Saturnine library. I've been using it locally for about a year, but haven't considered it ready for general use until now.
