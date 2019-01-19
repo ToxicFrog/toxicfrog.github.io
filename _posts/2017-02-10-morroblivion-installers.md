@@ -1,6 +1,3 @@
-SI:
-http://www.nexusmods.com/oblivion/mods/10739/?
-
 ---
 layout: post
 title: Morroblivion Wizards
