@@ -97,11 +97,15 @@ Most of the time, I'm not connected from some random machine -- I'm at home, con
 
 So it seems like we should be able to use that to open URLs in the browser that's already open on the laptop; we just need a way of detecting where we're connected from. Fortunately, we can do that! First, we need to figure out which tmux client -- since there might be several connected -- I'm actually using.
 
-    client_pid=$(tmux lsc -F '#{client_activity} #{client_pid}' | sort -g | tail -n1 | cut -d' ' -f2)
+    client_pid="$(
+      tmux lsc -F '#{client_activity} #{client_pid}' \
+      | sort -g | tail -n1 | cut -d' ' -f2)"
 
 This uses `tmux list-clients` to list all connected clients and sort them by most recent activity; the one we're using _right now_ should be the most recently active. And once we have the PID of the client, we can figure out where we SSH'd in from, since sshd helpfully sets the SSH_CLIENT environment variable when you connect:
 
-    client_ip=$(cat /proc/$client_pid/environ | tr '\0' '\n' | grep '^SSH_CLIENT' | cut -d= -f2 | cut -d' ' -f1)
+    client_ip="$(
+      cat /proc/$client_pid/environ \
+      | tr '\0' '\n' | grep '^SSH_CLIENT' | cut -d= -f2 | cut -d' ' -f1)"
 
 Knowing the client IP, we're now good to go:
 
