@@ -1,39 +1,100 @@
+SI:
+http://www.nexusmods.com/oblivion/mods/10739/?
+
 ---
 layout: post
-title: Setting Up Morroblivion
+title: Morroblivion Wizards
 ---
 
-[Morroblivion](http://tesrenewal.com/) is a fan-made remake of Morrowind in the Oblivion engine. It works by running an installer that automatically converts the TES3 data to TES4 format, in conjunction with about 2GB of mod data that overhauls the textures, models, and so forth, either by replacing them with high quality originals or remapping them to Oblivion equivalents, and recreates feature from Morrowind that Oblivion doesn't support natively using the scripting system, like cast-on-use enchantments.
+Morroblivion itself isn't too hard to install, but it can rapidly go out of control once you realize (a) how much better a few mods make the Oblivion UI and (b) how many bugfixes for Morroblivion exist that haven't been merged into the main ESP yet. (b) is especially pernicious because the Morroblivion forums have lots of threads about mods and fixes for it, but rarely if ever do they make it clear which ones are still useful and which ones have been obsoleted by subsequent Morroblivion releases.
 
-I'm writing this post mainly as a reminder to myself how to install it, since there are a few steps glossed over in the official instructions.
+Furthermore, even once you know what you want, you have to spend ages rummaging around on TESNexus to actually download the mods. And no-one should have to visit TESNexus.
 
-## Tools
+So, I spent a while packing up the mods I play Morroblivion with and cleaning them up for Wrye Bash installation. All of these packs are Bash-compatible and most of them have wizards to let you tweak the install to your liking.
 
-I use [Wrye Bash](https://github.com/wrye-bash/wrye-bash/releases) for Oblivion mod management, and most of the mods I link to here either support WB or have been repacked to support it. To use a mod installer, go to the "installers" tab of WB, then drag-and-drop the mod archive onto it; once WB has loaded the installer, right-click and choose "Wizard" or, if that's not available, "Install".
+Here are my revised instructions for installing Morroblivion.
 
-Don't forget to go to the "mods" tab afterwards and enable the ESPs.
+## Initial Setup
 
-## Prerequisites
-
-Morroblivion *requires*:
+Before anything else, you'll need to download and install:
 
  * Morrowind, with the Tribunal and Bloodmoon expansions
  * Oblivion, with the Shivering Isles expansion
- * [Oblivion Script Extender](http://obse.silverlock.org/) -- unlike everything else here, OBSE can't be installed using Wrye Bash; just unzip it into your Oblivion directory so that `obse_loader.exe` and `oblivion.exe` are in the same directory.
- * MenuQue and Ely's Universal Silent Voice (both packed together [here](FIXME))
+ * [Wrye Bash](https://github.com/wrye-bash/wrye-bash/releases) mod manager
+ * [Oblivion Script Extender](http://obse.silverlock.org/)
 
-It is also *strongly recommended* that you install the [unofficial Oblivion patch](FIXME) and [unofficial Shivering Isles patch](FIXME).
+OBSE can't be installed using Wrye Bash; just unpack it into your Oblivion directory. You should end up with `obse_loader.exe` and `Oblivion.exe` next to each other.
+
+### Installing mods with Wrye Bash
+
+Everything else linked from this page can be installed using Wrye Bash: start it up, click on the "installers" tab, then drag-and-drop the `.7z` file into the installers list to make Bash aware of it. To actually install it, right-click and choose `Wizard`, or, if that's not an option, `Install`.
+
+## Prerequisites
+
+Morroblivion requires some additional mods and OBSE plugins to function, and recommends installing the unofficial patches. These are packed together [here](http://funkyhorror.ancilla.ca/toxicfrog/tes/Morroblivion Prereqs.7z). Install it through Bash as noted above.
 
 ## Morroblivion proper
 
-Once you have those installed, head over to the [Morroblivion release thread](http://tesrenewal.com/forums/morroblivion/mods/753) and download the master file installer and the resources. You need both! The former will generate `morrowind_ob.esm`, the Morroblivion master file, from your Morrowind install; the latter can be installed via Wrye Bash and contains all the models, textures, and whatnot needed for it to function.
+Having installed the prereqs, head over to the [Morroblivion release thread](http://tesrenewal.com/forums/morroblivion/mods/753) and download the master file installer and the resources. You need both!
 
-; notes
-; first, install oblivion, morrowind, wrye bash, obse
-; then "morroblivion prereqs" package, will automatically install OBSE modules and unofficial patches
-; then put wizard.txt into morroblivion data package and install that; it'll ask for settings at install time
-; then "morroblivion addons" for MO/magic/anhassi fixes, brighter nights, lost magic, loading screens, and map; OBME will be installed if needed
-; WIP: then "oblivion addons" for TQP, enhanced hotkeys, realistic leveling, map marker be done, OSR, DarkUI, and DarNconfigurator
+Unpack and run the installer and it'll generate `morrowind_ob.esm` in your Oblivion directory. In addition to this file, you need
+
+## enchanting
+
+- bound boots/cuirass/gauntlets/greaves/helm/shield
+- bound dagger/axe/bow/mace/spear/sword
+- chameleon
+- cure disease/paralysis/poison
+- detect life
+- detect magic
+- fortify attack/attribute/fatigure/magic/health/skill
+- fire/frost/lightning shield
+- feather
+- invisibility
+- jump
+- light
+- levitate
+- night-eye
+- reflect damage
+- restore fatigue/health
+- reflect spell
+- resist disease
+
+
+
+## Morroblivion addons
+## Oblivion addons
+## Load order
+## Included Mods
+
+`Morroblivion Prereqs.7z` contains:
+
+  * [Ely's Universal Silent Voice v0.93](http://www.nexusmods.com/oblivion/mods/16622/?)
+  * [MenuQue v16b](http://www.nexusmods.com/oblivion/mods/32200/?)
+  * [Unofficial Oblivion Patch v3.5.5](http://www.nexusmods.com/oblivion/mods/5296/?)
+  * [Unofficial Shivering Isles Patch v1.5.9](http://www.nexusmods.com/oblivion/mods/10739/?)
+
+`Morroblivion Addons.7z` contains:
+
+  * Anhassi Fix
+  * Morroblivion Fixes v1.5 (https://tesrenewal.com/forums/morroblivion-mod-releases/rel-morroblivion-fixes-v15)
+  * Morroblivion Lost Magic v0.7
+  * Morroblivion Magic Fixes v1.3
+  * Morroblivion New Map v1.0 and v1.1
+  * Morrowind Loading Screens
+  * [Oblivion Magic Extender v1.0](http://www.nexusmods.com/oblivion/mods/31981/?)
+  * Weather Fix
+
+`Oblivion Addons.7z` contains:
+
+  * [DarkUId DarN v1.6](http://www.nexusmods.com/oblivion/mods/11280/?)
+  * [DarNified UI Configurator v1.4](http://www.nexusmods.com/oblivion/mods/34792/?)
+  * Ely's Map Marker Be Done
+  * Enhanced Hotkeys
+  * Oblivion Stutter Remover
+  * Pluggy v132-dev
+  * Realistic Leveling
+  * Toggleable Quantity Prompt
 
 
 ### Subpackages
