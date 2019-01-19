@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NixOS: Installation & Initial Hurdles
+title: NixOS -- Installation & Initial Hurdles
 ---
 
 The NixOS installer is, well, there isn't one as such; there's no guided installation program like you get with (say) SUSE or Ubuntu. The good news is that the actual process of installation is very quick and straightforward if you're comfortable managing partitions and mountpoints by hand:

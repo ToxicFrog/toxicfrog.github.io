@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NixOS: Software Installation
+title: NixOS -- Software Installation
 ---
 
 In general, there's four ways to install software in Nix:
