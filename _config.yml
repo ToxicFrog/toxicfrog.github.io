@@ -25,7 +25,7 @@ footer-links:
   instagram:
   linkedin:
   pinterest:
-  rss: testing
+  rss: /feed.xml
   twitter: ranavin
   stackoverflow: users/2755919/toxicfrog
   youtube: user/froxictog
@@ -68,6 +68,9 @@ kramdown:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
 
+plugins:
+  - jekyll-feed
+
 # Set the Sass partials directory, as we're using @imports
 sass:
   style: :expanded # You might prefer to minify using :compressed
@@ -75,7 +78,7 @@ sass:
 # Use the following plug-ins
 gems:
   #- jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  #- jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
 # Exclude these files from your production _site
 exclude:
