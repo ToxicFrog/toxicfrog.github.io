@@ -20,7 +20,7 @@ Doing this for any one command is easy; you just do something like this:
       fi
     }
 
-(`silently`, by the way, is just `function silently { &>/dev/null "$@"; }`)But then you have to write one of these for each command you want to wrap. It gets tedious pretty fast.
+(`silently`, by the way, is just `function silently { &>/dev/null "$@"; }`). But then you have to write one of these for each command you want to wrap. It gets tedious pretty fast.
 
 So, once I started wanting to do this for more than one command, I wrote a generic version, that looks like this:
 
