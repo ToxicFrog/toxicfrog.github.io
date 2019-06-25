@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Share By Link" with fgallery and nginx
+title: Share-By-Link with fgallery and nginx
 ---
 
 For a while I've wanted a better solution to personal file sharing. Just tossing stuff into `/srv/www` works, but makes it hard to isolate files shared with one person from files shared with anyone else. Nor does it have a good UX for sharing photo galleries, or a convenient way to say "shove all these files into a zip and share that". Using Google Drive and Google Photos solves that, but has issues of its own, like making it easy to leak personal information and not having a line client.
