@@ -15,6 +15,9 @@ avatar: https://avatars1.githubusercontent.com/u/90456
 # Flags below are optional
 #
 
+# Show posts from the future
+future: true
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
